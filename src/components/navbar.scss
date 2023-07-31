@@ -1,0 +1,23 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    gap: 20px;
+    color: #ff6060;
+  }
+
+  & a {
+    font-size: 17px;
+  }
+  
+  & a:visited {
+    color: #ff6060;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}

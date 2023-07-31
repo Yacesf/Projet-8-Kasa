@@ -1,0 +1,21 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar__link {
+  display: flex;
+  gap: 20px;
+  color: #ff6060;
+}
+#navbar a {
+  font-size: 17px;
+}
+#navbar a:visited {
+  color: #ff6060;
+}
+#navbar a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=navbar.css.map */
