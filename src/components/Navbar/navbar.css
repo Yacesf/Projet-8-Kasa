@@ -7,15 +7,13 @@
   display: flex;
   gap: 20px;
   color: #ff6060;
-}
-#navbar a {
   font-size: 17px;
 }
-#navbar a:visited {
-  color: #ff6060;
-}
-#navbar a:hover {
+#navbar__link :hover {
   text-decoration: underline;
+}
+#navbar__link :visited {
+  color: #ff6060;
 }
 
 /*# sourceMappingURL=navbar.css.map */

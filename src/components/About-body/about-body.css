@@ -1,0 +1,8 @@
+#about-container {
+  padding: 30px 10% 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=about-body.css.map */

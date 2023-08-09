@@ -1,0 +1,21 @@
+.appartment__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff6060;
+  width: 30%;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 5px 5px 10px 5px;
+}
+.appartment__item__cover {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+}
+.appartment__item__name {
+  font-size: 20px;
+  color: white;
+}
+
+/*# sourceMappingURL=appartment.css.map */

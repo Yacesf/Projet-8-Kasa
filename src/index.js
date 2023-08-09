@@ -6,19 +6,25 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
+import About from './about';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <div>404</div>,
   },
-// test react router
   {
-    path: "/moi",
-    element: <div>SALUT C'EST MOI</div>,
+    path: "/apartment",
+    element: <div>LOGEMENT</div>,
+    errorElement: <div>404</div>,
   },
-// 
+  {
+    path: "/about",
+    element: <About />,
+    errorElement: <div>404</div>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
