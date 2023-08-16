@@ -1,0 +1,27 @@
+#appartment {
+  width: 100%;
+  background: rgb(246, 246, 246);
+  border-radius: 25px;
+  margin-top: 50px;
+  padding: 50px;
+  display: flex;
+}
+#appartment__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  #appartment {
+    padding: 0;
+    background-color: white;
+  }
+  #appartment__container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=appartment-home.css.map */

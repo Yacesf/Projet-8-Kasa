@@ -1,3 +1,6 @@
+.about-line {
+  overflow: hidden;
+}
 .about-line__title {
   display: flex;
   align-items: center;
@@ -18,6 +21,15 @@
   background-color: rgb(246, 246, 246);
   color: #FF6060;
   padding: 10px;
+  animation: translate-item 0.5s ease-in-out;
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes translate-item {
+  0% {
+    transform: translateY(-75%);
+  }
 }
 
 /*# sourceMappingURL=about-line.css.map */

@@ -1,0 +1,42 @@
+#error {
+  padding: 10%;
+  color: #ff6060;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 288px;
+
+    &__description {
+      font-size: 36px;
+      margin-top: 75px;
+      text-align: center;
+    }
+  }
+  &__return-home {
+    font-size: 18px;
+    margin-top: 100px;
+    text-align: center;
+    color: #ff6060;
+    text-decoration: underline;
+
+    & :visited {
+      color: #ff6060;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  #error__title {
+    font-size: 96px; 
+    margin-top: 40px;
+  }
+  #error__title__description {
+    font-size: 18px;
+    margin-top: 60px;
+  }
+  #error__return-home {
+    font-size: 14px;
+  }
+}

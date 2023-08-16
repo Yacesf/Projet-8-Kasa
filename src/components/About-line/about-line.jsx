@@ -25,7 +25,7 @@ function AboutLine(props) {
       </div>
       <div
         className="about-line__text"
-        style={{ display: isTextVisible ? "block" : "none" }}
+        style={{ display: isTextVisible ? "flex" : "none" }}
       >
         <p>{props.text}</p>
       </div>

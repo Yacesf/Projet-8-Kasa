@@ -5,9 +5,9 @@ import "./navbar.css";
 function Navbar() {
   return (
     <nav id="navbar">
-      <div id="navbar__logo">
+      <Link to={"/"} id="navbar__logo">
         <img src="Image-Kasa/LOGO.png" alt="Logo Kasa" />
-      </div>
+      </Link>
       <div id="navbar__link">
         <Link to={"/"}>
           <div>Accueil</div>

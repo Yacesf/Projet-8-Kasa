@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Appartment from "../Appartment/appartment";
-import "./appartment-container.css";
+import AppartmentCard from "../AppartmentCard/appartmentCard";
+import "./appartment-home.css";
 
 async function fetchData() {
   const data = await fetch("./data.json", {
@@ -12,7 +12,7 @@ async function fetchData() {
   return data.json();
 }
 
-function AppartmentContainer() {
+function AppartmentHome() {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetchData().then((r) => {
@@ -21,7 +21,7 @@ function AppartmentContainer() {
   }, []);
   useEffect(() => {
     if (data.length !== 0 && data[1].id === "b9123946") {
-      const copyData = structuredClone(data)
+      const copyData = structuredClone(data);
       setData(copyData.sort((a, b) => a.title.localeCompare(b.title)));
     }
   }, [data]);
@@ -30,11 +30,16 @@ function AppartmentContainer() {
     <div id="appartment">
       <div id="appartment__container">
         {data.map((item) => (
-          <Appartment key={item.id} cover={item.cover} title={item.title} />
+          <AppartmentCard
+            key={item.id}
+            id={item.id}
+            cover={item.cover}
+            title={item.title}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-export default AppartmentContainer;
+export default AppartmentHome;

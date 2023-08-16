@@ -8,8 +8,20 @@
 
   &__container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #appartment {
+    padding: 0;
+    background-color: white;
+
+    &__container {
+      flex-direction: column;
+    }
   }
 }

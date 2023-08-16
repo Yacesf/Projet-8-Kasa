@@ -5,4 +5,10 @@
   padding: 3%;
 }
 
+@media (max-width: 768px) {
+  #container {
+    padding: 5%;
+  }
+}
+
 /*# sourceMappingURL=container.css.map */

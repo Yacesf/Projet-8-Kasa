@@ -18,3 +18,15 @@
     }
   }
 }
+
+@media (max-width:768px) {
+  #navbar img {
+    width: 100%;
+  }
+  #navbar__logo {
+    width: 50%;
+  }
+  #navbar__link {
+    font-size: 14px;
+  }
+}
