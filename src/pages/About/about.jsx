@@ -3,7 +3,7 @@ import "./about.css";
 import Container from "../../components/Container/container";
 import Navbar from "../../components/Navbar/navbar";
 import Banner from "../../components/Banner/banner";
-import AboutBody from "../../components/About-body/about-body";
+import AboutBody from "./About-body/about-body";
 import Loader from "../../components/Loader/loader";
 
 function About() {

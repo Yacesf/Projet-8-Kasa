@@ -1,30 +1,24 @@
 import React, { useEffect, useState } from "react";
+/*import { useLocation } from "react-router-dom";*/
 import AppartmentCard from "../AppartmentCard/appartmentCard";
 import "./appartment-home.css";
-
-async function fetchData() {
-  const data = await fetch("./data.json", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  return data.json();
-}
+import { useAppartmentContext } from "../../../context/AppartmentContext";
 
 function AppartmentHome() {
+  const appartmentContext = useAppartmentContext();
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetchData().then((r) => {
-      setData(r);
-    });
+    setData(appartmentContext);
+    console.log(data);
   }, []);
+
   useEffect(() => {
-    if (data.length !== 0 && data[1].id === "b9123946") {
+    if (data && data.length !== 0 && data[1].id === "b9123946") {
       const copyData = structuredClone(data);
-      setData(copyData.sort((a, b) => a.title.localeCompare(b.title)));
+      setData(copyData.sort((a, b) => a.title.localeCompare(b.title)))
     }
-  }, [data]);
+  }, [data])
+  console.log(data);
 
   return (
     <div id="appartment">

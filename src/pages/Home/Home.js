@@ -3,7 +3,7 @@ import "./Home.css";
 import Container from "../../components/Container/container";
 import Navbar from "../../components/Navbar/navbar";
 import Banner from "../../components/Banner/banner";
-import AppartmentHome from "../../components/Appartment-Home/appartment-home";
+import AppartmentHome from "./Appartment-Home/appartment-home";
 import Loader from "../../components/Loader/loader";
 
 function Home() {

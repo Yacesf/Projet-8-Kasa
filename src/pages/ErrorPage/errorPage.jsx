@@ -3,7 +3,7 @@ import "./errorPage.css";
 import Container from "../../components/Container/container";
 import Navbar from "../../components/Navbar/navbar";
 import Loader from "../../components/Loader/loader";
-import ErrorContent from "../../components/Error/error";
+import ErrorContent from "./Error/error";
 
 function ErrorPage() {
   return (
