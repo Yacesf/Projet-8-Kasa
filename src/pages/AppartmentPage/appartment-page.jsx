@@ -2,26 +2,22 @@ import React, { useState, useEffect } from "react";
 import "./appartment-page.css";
 import Container from "../../components/Container/container";
 import Navbar from "../../components/Navbar/navbar";
-import Loader from "../../components/Loader/loader";
+import Footer from "../../components/Footer/footer";
 import Flat from "./Flat/flat";
 import { useAppartmentContext } from "../../context/AppartmentContext";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function AppartmentPage() {
-  const location = useLocation();
+  const params = useParams();
   const appartmentContext = useAppartmentContext();
   const [appartmentSelected, setAppartmentSelected] = useState(null);
 
   useEffect(() => {
-    if (appartmentContext.length > 0) {
       const selectedAppartment = appartmentContext.find(
-        (item) => item.id === location.state.appartmentId
+        (item) => item.id === params.id
       );
       setAppartmentSelected(selectedAppartment);
-    }
-  }, [appartmentContext, location.state.appartmentId]);
-
-  console.log(appartmentSelected);
+  }, [appartmentContext, params.id]);
 
   return (
     <div>
@@ -31,7 +27,7 @@ function AppartmentPage() {
           <Flat appartmentData={appartmentSelected} />
         ) : null}
       </Container>
-      <Loader />
+      <Footer />
     </div>
   );
 }

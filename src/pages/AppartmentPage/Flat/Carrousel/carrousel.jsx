@@ -1,12 +1,41 @@
-import React from "react";
-import "./carrousel.css";
+import React, { useState } from "react";
+import "./gallery.css";
 
-function Carrousel(props) {
+function Gallery(props) {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % props.img.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage(
+      (prevIndex) => (prevIndex - 1 + props.img.length) % props.img.length
+    );
+  };
+
+  let numberOfGallery = currentImage + 1;
+
   return (
-    <div className="carrousel-container">
-      <img src={props.img[0]} alt={props.alt}></img>
+    <div id="gallery-container">
+      <img src={props.img[currentImage]} alt={props.alt}></img>
+      <div id="gallery-container__arrow">
+        <i
+          id="arrow__right"
+          className="fa-solid fa-chevron-right"
+          onClick={nextImage}
+        ></i>
+        <i
+          id="arrow__left"
+          className="fa-solid fa-chevron-left"
+          onClick={prevImage}
+        ></i>
+      <div id="number-of-gallery">
+        {numberOfGallery}/{props.img.length}
+      </div>
+      </div>
     </div>
   );
 }
 
-export default Carrousel;
+export default Gallery;

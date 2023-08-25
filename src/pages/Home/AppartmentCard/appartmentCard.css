@@ -19,6 +19,12 @@
   padding: 10px;
 }
 
+@media (max-width: 1170px) {
+  .appartment__item {
+    width: 27%;
+    height: 170px;
+  }
+}
 @media (max-width: 768px) {
   .appartment__item {
     width: 100%;

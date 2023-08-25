@@ -4,7 +4,8 @@ import Container from "../../components/Container/container";
 import Navbar from "../../components/Navbar/navbar";
 import Banner from "../../components/Banner/banner";
 import AppartmentHome from "./Appartment-Home/appartment-home";
-import Loader from "../../components/Loader/loader";
+import Footer from "../../components/Footer/footer";
+import bannerImage from "../../Image-Kasa/Image1.png"
 
 function Home() {
   return (
@@ -12,13 +13,13 @@ function Home() {
       <Container>
         <Navbar />
         <Banner
-          img="./Image-Kasa/Image1.png"
+          img={bannerImage}
           alt="Banniere d'accueil"
           text="Chez vous, partout et ailleurs"
         />
         <AppartmentHome />
       </Container>
-      <Loader />
+      <Footer />
     </div>
   );
 }

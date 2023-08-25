@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import "./about-line.css";
+import "./appartment-detail.css";
 
-function AboutLine(props) {
+function AppartmentDetail(props) {
   const [isTextVisible, setTextVisible] = useState(false);
-  
+
   const toggleTextVisibility = () => {
     setTextVisible(!isTextVisible);
-  }
+  };
 
   return (
-    <div className="about-line">
-      <div className="about-line__title">
+    <>
+      <div className="block__title">
         <h2>{props.title}</h2>
-        <div className="about-line__arrow" onClick={toggleTextVisibility}>
+        <div className="flat-container__arrow" onClick={toggleTextVisibility}>
           <i
             className="fa-solid fa-chevron-down"
             style={{ display: isTextVisible ? "none" : "flex" }}
@@ -24,13 +24,13 @@ function AboutLine(props) {
         </div>
       </div>
       <div
-        className="about-line__text"
+        className="block__text"
         style={{ display: isTextVisible ? "flex" : "none" }}
       >
-        <p>{props.text}</p>
+        {props.text}
       </div>
-    </div>
+    </>
   );
 }
 
-export default AboutLine;
+export default AppartmentDetail;

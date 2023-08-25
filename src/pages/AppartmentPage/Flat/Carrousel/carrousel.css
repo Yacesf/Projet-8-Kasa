@@ -1,9 +1,59 @@
-.carrousel-container {
+#gallery-container {
   margin-top: 50px;
 }
-.carrousel-container img {
+#gallery-container img {
   height: 415px;
   width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+#gallery-container__arrow {
+  font-size: 90px;
+  color: white;
+}
+
+#arrow__right {
+  position: absolute;
+  top: 330px;
+  left: 89%;
+}
+
+#arrow__left {
+  position: absolute;
+  top: 330px;
+  right: 89%;
+}
+
+#number-of-gallery {
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  #gallery-container {
+    position: relative;
+    margin-top: 25px;
+  }
+  #gallery-container img {
+    height: 255px;
+  }
+  #gallery-container__arrow {
+    font-size: 30px;
+  }
+  #gallery-container #arrow__right {
+    top: 45%;
+    left: 92%;
+  }
+  #gallery-container #arrow__left {
+    top: 45%;
+    right: 92%;
+  }
+  #gallery-container #number-of-gallery {
+    right: 48%;
+    top: 83%;
+  }
 }
 
 /*# sourceMappingURL=carrousel.css.map */

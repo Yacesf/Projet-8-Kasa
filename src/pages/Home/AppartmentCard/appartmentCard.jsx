@@ -7,10 +7,7 @@ function appartmentCard(props) {
     <Link
       id={props.id}
       className="appartment__item"
-      to={"/appartment"}
-      state={{
-        appartmentId: props.id,
-      }}
+      to={`/appartment/${props.id}`}
     >
       <img
         className="appartment__item__cover"

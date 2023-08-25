@@ -13,16 +13,17 @@ async function fetchData() {
       "Content-Type": "application/json",
     },
   });
+  console.log(data);
   return data.json();
 }
 
 export const AppartmentProvider = ({ children }) => {
-  const [appartment, setAppartment] = useState();
+  const [appartment, setAppartment] = useState([]);
 
   useEffect(() => {
     fetchData().then((r) => {
-      setAppartment(r);
-    });
+      setAppartment(r)
+    }).catch(err => console.log(err))
   }, []);
 
   return (

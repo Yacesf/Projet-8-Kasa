@@ -1,15 +1,24 @@
 import React from "react";
 import "./flat.css";
-import "./Carrousel/carrousel";
-import Carrousel from "./Carrousel/carrousel";
+import Gallery from "./Carrousel/carrousel";
+import AppartmentContent from "./AppartmentContent/appartmentContent";
 
 function Flat(props) {
   return (
     <div>
-      <Carrousel
+      <Gallery
         img={props.appartmentData.pictures}
         alt={props.appartmentData.title}
       />
+      <AppartmentContent
+       title={props.appartmentData.title}
+       location={props.appartmentData.location}
+       host={props.appartmentData.host}
+       tags={props.appartmentData.tags}
+       rating={props.appartmentData.rating}
+       description={props.appartmentData.description}
+       equipments={props.appartmentData.equipments}
+        />
     </div>
   );
 }
