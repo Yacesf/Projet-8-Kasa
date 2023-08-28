@@ -1,7 +1,6 @@
 import React from "react";
-import "./Appartment-Detail/appartment-detail";
 import "./appartmentContent.css";
-import AppartmentDetail from "./Appartment-Detail/appartment-detail";
+import Collapse from "../../../../components/Collapse/collapse"
 
 function AppartmentContent(props) {
 
@@ -35,10 +34,10 @@ function AppartmentContent(props) {
       </div>
       <div id="flat-container__third-line">
         <div id="flat-container__description">
-          <AppartmentDetail title={"Description"} text={props.description} />
+          <Collapse title={"Description"} text={props.description} />
         </div>
         <div id="flat-container__equipments">
-          <AppartmentDetail
+          <Collapse
             title={"Equipements"}
             text={props.equipments.map((equipment) => (
               <span key={equipment}>{equipment}</span>

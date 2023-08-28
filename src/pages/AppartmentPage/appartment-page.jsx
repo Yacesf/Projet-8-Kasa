@@ -19,6 +19,9 @@ function AppartmentPage() {
       setAppartmentSelected(selectedAppartment);
   }, [appartmentContext, params.id]);
 
+  localStorage.setItem('selectedAppartment', JSON.stringify(appartmentSelected))
+  console.log(localStorage);
+  
   return (
     <div>
       <Container>

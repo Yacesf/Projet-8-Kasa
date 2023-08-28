@@ -9,10 +9,13 @@
   color: #ff6060;
   font-size: 17px;
 }
-#navbar__link :hover {
+#navbar__link a {
+  color: #ff6060;
+}
+#navbar__link a:hover {
   text-decoration: underline;
 }
-#navbar__link :visited {
+#navbar__link:visited {
   color: #ff6060;
 }
 

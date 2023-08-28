@@ -1,6 +1,6 @@
 import React from "react";
 import "./flat.css";
-import Gallery from "./Carrousel/carrousel";
+import Gallery from "../../../components/Gallery/gallery";
 import AppartmentContent from "./AppartmentContent/appartmentContent";
 
 function Flat(props) {

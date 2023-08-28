@@ -1,0 +1,53 @@
+@import "../../sass/variables.scss";
+@import "../../sass/keyframes.scss";
+@import "../../sass/mixins.scss";
+
+.block {
+  overflow: hidden;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    color: $color-primaire;
+    padding: 10px;
+    animation: translate-item 0.5s ease-in-out;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__title {
+    @include flex-between;
+    align-items: center;
+    background-color: $color-primaire;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  
+    & h2 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+
+.container__arrow {
+  display: flex;
+  font-size: 23px;
+}
+
+@media (max-width:768px) {
+  .block__title h2 {
+    font-size: 13px;
+  }
+
+  .block__text {
+    font-size: 12px;
+  }
+
+  .container__arrow {
+    font-size: 18px;
+  }
+}
