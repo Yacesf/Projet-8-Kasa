@@ -6,24 +6,22 @@ export const useAppartmentContext = () => {
   return useContext(AppartmentContext);
 };
 
-async function fetchData() {
-  const data = await fetch("./data.json", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  console.log(data);
-  return data.json();
-}
-
 export const AppartmentProvider = ({ children }) => {
   const [appartment, setAppartment] = useState([]);
 
   useEffect(() => {
-    fetchData().then((r) => {
-      setAppartment(r)
-    }).catch(err => console.log(err))
+    async function fetchData() {
+      try {
+        const data = await fetch("../../data.json", {
+          method: "GET",
+        });
+        const d = await data.json();
+        setAppartment(d);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
   }, []);
 
   return (

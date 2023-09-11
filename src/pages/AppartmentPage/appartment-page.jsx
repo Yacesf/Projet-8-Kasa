@@ -13,14 +13,13 @@ function AppartmentPage() {
   const [appartmentSelected, setAppartmentSelected] = useState(null);
 
   useEffect(() => {
+    if (appartmentContext.length > 0) {
       const selectedAppartment = appartmentContext.find(
         (item) => item.id === params.id
       );
       setAppartmentSelected(selectedAppartment);
+    }
   }, [appartmentContext, params.id]);
-
-  localStorage.setItem('selectedAppartment', JSON.stringify(appartmentSelected))
-  console.log(localStorage);
   
   return (
     <div>
