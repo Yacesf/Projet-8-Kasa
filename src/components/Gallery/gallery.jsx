@@ -5,7 +5,7 @@ function Gallery(props) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
-    setCurrentImage((prevIndex) => (prevIndex + 1) % props.img.length);
+    setCurrentImage((nextIndex) => (nextIndex + 1) % props.img.length);
   };
 
   const prevImage = () => {
