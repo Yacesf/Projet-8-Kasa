@@ -1,4 +1,5 @@
 #gallery-container {
+  position: relative;
   margin-top: 50px;
 }
 #gallery-container img {
@@ -14,19 +15,19 @@
 
 #arrow__right {
   position: absolute;
-  top: 330px;
-  left: 89%;
+  top: 40%;
+  left: 90%;
 }
 
 #arrow__left {
   position: absolute;
-  top: 330px;
-  right: 89%;
+  top: 40%;
+  right: 90%;
 }
 
 #number-of-gallery {
   position: absolute;
-  top: 70%;
+  top: 80%;
   right: 50%;
   font-size: 18px;
 }
@@ -51,9 +52,8 @@
     right: 92%;
   }
   #gallery-container #number-of-gallery {
-    right: 48%;
-    top: 83%;
+    display: none;
   }
 }
 
-/*# sourceMappingURL=carrousel.css.map */
+/*# sourceMappingURL=gallery.css.map */
